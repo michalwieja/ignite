@@ -20,9 +20,13 @@ const currentYear = `${yyyy}-${mm}-${dd}`;
 const lastYear = `${yyyy - 1}-${mm}-${dd}`;
 const nextYear = `${yyyy + 1}-${mm}-${dd}`;
 
-//popular
+//urls
 
-export default const popularGamesUrl = () =>
+export const popularGamesUrl = () =>
   `${base_url}games?dates=${lastYear},${currentYear}&ordering=-rating&page_size=10`;
 
+export const upcomingGamesUrl = () =>
+  `${base_url}games?dates=${currentYear},${nextYear}&ordering=-added&page_size=10`;
 
+export const newGamesUrl = () =>
+  `${base_url}games?dates=${lastYear},${currentYear}&ordering=-released&page_size=10`;
