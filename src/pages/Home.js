@@ -6,7 +6,7 @@ function Home() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(loadGames());
-  });
+  }, []);
 
   return (
     <div>
